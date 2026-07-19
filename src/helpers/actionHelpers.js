@@ -9,7 +9,8 @@ class ActionHelper {
     }
 
     static launchApp() {
-        driver.launchApp();
+    // No-op: Appium automatically launches the app on session start
+    // because the 'app' capability is provided in android.config.js
     }
 
     static switchToNativeContext() {

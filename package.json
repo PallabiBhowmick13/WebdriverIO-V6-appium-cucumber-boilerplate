@@ -28,9 +28,10 @@
     "@wdio/mocha-framework": "^6.1.8",
     "@wdio/spec-reporter": "^6.1.12",
     "@wdio/sync": "^6.1.8",
+    "appium": "^1.22.3",
     "chromedriver": "^83.0.0",
-    "wdio-chromedriver-service": "^6.0.3",
-    "eslint": "^7.3.0"
+    "eslint": "^7.3.0",
+    "wdio-chromedriver-service": "^6.0.3"
   },
   "dependencies": {
     "chai": "^4.2.0",

@@ -6,13 +6,13 @@ const path = require('path');
 config.capabilities = [
     {
         platformName: 'Android',
-        noReset: true,
-        fullReset: false,
+        'appium:noReset': true,
+        'appium:fullReset': false,
         maxInstances: 1,
-        automationName: 'uiautomator2',
-        deviceName: AndroidInfo.deviceName(),
-        platformVersion: AndroidInfo.platFormVersion(),
-        app: path.resolve(`./apps/${AndroidInfo.appName()}`)
+        'appium:automationName': 'uiautomator2',
+        'appium:deviceName': AndroidInfo.deviceName(),
+        'appium:platformVersion': AndroidInfo.platFormVersion(),
+        'appium:app': path.resolve(`./apps/${AndroidInfo.appName()}`)
     }
 ];
 

@@ -1,10 +1,10 @@
 class AndroidInfo {
     static deviceName() {
-        return '5527c8fb'; // pass the udid or devicename
+        return 'emulator-5554'; // pass the udid or devicename of nexus 5
     }
 
     static platFormVersion() {
-        return '9'; // pass the platform version
+        return '8.0.0'; // pass the platform version (Android version) of nexus 5
     }
 
     static appName() {

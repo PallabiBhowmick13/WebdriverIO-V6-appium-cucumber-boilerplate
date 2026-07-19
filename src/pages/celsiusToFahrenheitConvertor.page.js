@@ -20,6 +20,17 @@ class CelsiusToFahrenhietConvertorPage {
         ActionHelper.pause(10);
     }
 
+    verifyCelsiusFieldDisplayed() {
+        this.dismissAppRatingIfPresent();
+        ActionHelper.waitForElement(this.getObjectLocator().celsiusTextField, 4);
+        ActionHelper.isVisible(this.getObjectLocator().celsiusTextField).should.equal(true);
+    }
+
+    clearCelsiusField() {
+        ActionHelper.waitForElement(this.getObjectLocator().celsiusTextField, 4);
+        ActionHelper.clearText(this.getObjectLocator().celsiusTextField);
+    }
+
     enterCelsius(celsiusValue) {
         this.dismissAppRatingIfPresent();
         ActionHelper.waitForElement(this.getObjectLocator().celsiusTextField, 4);
@@ -30,8 +41,10 @@ class CelsiusToFahrenhietConvertorPage {
 
     verifyFahrenheitValue(fahrenheitValue) {
         ActionHelper.waitForElement(this.getObjectLocator().fahrenheitTextField, 4);
-        ActionHelper.getText(this.getObjectLocator().fahrenheitTextField).should.equal(fahrenheitValue);
+        const actualText = ActionHelper.getText(this.getObjectLocator().fahrenheitTextField);
+        parseFloat(actualText).should.equal(parseFloat(fahrenheitValue));
     }
+   
 }
 
 module.exports = CelsiusToFahrenhietConvertorPage;

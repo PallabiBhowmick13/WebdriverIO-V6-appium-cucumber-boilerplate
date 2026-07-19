@@ -7,12 +7,16 @@ config.capabilities = [
         platformName: 'Android',
         browserName: 'chrome',
         maxInstances: 1,
-        automationName: 'uiautomator2',
-        deviceName: AndroidInfo.deviceName(),
-        platformVersion: AndroidInfo.platFormVersion()
+        'appium:automationName': 'uiautomator2',
+        'appium:deviceName': AndroidInfo.deviceName(),
+        'appium:platformVersion': AndroidInfo.platFormVersion(),
+        'appium:chromedriverAutodownload': true
     }
 ];
 
 config.cucumberOpts.tagExpression = '@androidBrowser'; // pass tag to run tests specific to android
 
 exports.config = config;
+
+
+
